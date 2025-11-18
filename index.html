@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqsa Mogal - Cute Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", cursive;
+            background-color: #ffe6f2;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* FLOATING HEARTS */
+        .heart {
+            position: fixed;
+            top: -10px;
+            color: #ff66b3;
+            font-size: 22px;
+            animation: float 5s linear infinite;
+            opacity: 0.7;
+            z-index: 999;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(800px) translateX(50px); opacity: 0; }
+        }
+
+        header {
+            text-align: center;
+            background-color: #fffc88;
+            padding: 25px;
+            border-bottom: 5px solid #ff99cc;
+            box-shadow: 0 0 15px #ff9ed1;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ff4da6;
+            font-size: 3rem;
+            text-shadow: 0 0 10px #ffb3d9;
+        }
+
+        header p {
+            margin: 8px 0;
+            color: #ff66b3;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        section {
+            background: white;
+            margin: 20px auto;
+            width: 85%;
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.25);
+            border: 3px solid #ffb3d9;
+            animation: glow 2.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 12px #ffb3d9; }
+            to { box-shadow: 0 0 22px #ff66b3; }
+        }
+
+        h2 {
+            color: #ff1a8c;
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        .cute-btn {
+            background-color: #ff99dd;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 2px solid #ff4da6;
+            display: inline-block;
+            color: #fff;
+            font-weight: 600;
+            box-shadow: 0 0 8px #ff9ed1;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .cute-btn:hover {
+            background-color: #ff66c4;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ff66c4;
+        }
+
+        .edu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .edu-table th, .edu-table td {
+            border: 2px solid #ff99cc;
+            padding: 12px;
+            text-align: left;
+            background-color: #fff0f6;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            background-color: #fffc88;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 15px;
+            color: #cc007a;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #fffc88;
+            margin-top: 20px;
+            border-top: 4px solid #ff99cc;
+            color: #ff4da6;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- FLOATING HEARTS -->
+<script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💗";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+</script>
+
+<header>
+    <h1>💗 Aqsa Mogal 💗</h1>
+    <p>Cute, Bubbly & Learning Tech One Step at a Time ✨</p>
+</header>
+
+<section>
+    <h2>🌸 About Me</h2>
+    <p>
+        Hi, I’m <b>Aqsa Mogal</b>! A bubbly, curious and soft-hearted girl studying at <b>Noble University</b>.  
+        I love learning tech, creating cute things, and becoming better every day.
+    </p>
+</section>
+
+<section>
+    <h2>💛 My Studies</h2>
+    <table class="edu-table">
+        <tr>
+            <th>Institution</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td><b>Noble University</b></td>
+            <td>Web Designing, C, C++, DBMS</td>
+        </tr>
+        <tr>
+            <td><b>Kanya Chatralay</b></td>
+            <td>Completed High School</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>💖 Things About Me</h2>
+    <ul>
+        <li>I love ducks 🦆 (my city: *Quacktopia*)</li>
+        <li>I’m bubbly, chaotic, cute and funny</li>
+        <li>I love sea life facts 🌊</li>
+        <li>I enjoy crochet (even if slow hehe)</li>
+        <li>I love reading short fast-paced books</li>
+        <li>I adore pink, soft, pastel aesthetics 🌸</li>
+        <li>I like simple workouts + healthy routines</li>
+    </ul>
+</section>
+
+<section>
+    <h2>✨ My Skills</h2>
+    <h3>Technical Skills</h3>
+    <ul>
+        <li>C Programming</li>
+        <li>C++ Programming</li>
+        <li>HTML & CSS Basics</li>
+        <li>DBMS Concepts</li>
+        <li>Problem Solving</li>
+    </ul>
+
+    <h3>Soft Skills</h3>
+    <ul>
+        <li>Fast Learner</li>
+        <li>Creative Thinking</li>
+        <li>Curious + Enthusiastic</li>
+        <li>Teamwork</li>
+        <li>Hardworking</li>
+    </ul>
+</section>
+
+<section>
+    <h2>🚀 Career Goal</h2>
+    <p>
+        I want to become a <b>Software Developer</b> and create meaningful digital experiences.  
+        Step by step, I’m learning, improving, and building my future.
+    </p>
+    <a class="cute-btn" href="#">My Future Projects 💗</a>
+</section>
+
+<footer>
+    Made with 💗 + 💛 by Aqsa • Stay Cute & Keep Growing ✨
+</footer>
+
+</body>
+</html>
